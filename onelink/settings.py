@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': "u174111516_onelink_db",
         'USER': "u174111516_rajpardhan",
         'PASSWORD': "Rajpardhan138@gmail.hostinger",
-        'HOST': "216.24.57.252",
+        'HOST': "srv1188.hstgr.io",
         'PORT': "3306",
     }
 }
