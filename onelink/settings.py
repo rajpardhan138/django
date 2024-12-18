@@ -85,9 +85,9 @@ WSGI_APPLICATION = "onelink.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "u174111516_onelink_db",
-        'USER': "u174111516_rajpardhan",
-        'PASSWORD': "Rajpardhan138@gmail.hostinger",
+        'NAME': "onelink_db",
+        'USER': "root",
+        'PASSWORD': "wrMHsfs#EMXTTXiVmwgH",
         'HOST': "localhost",
         'PORT': "3306",
     }
