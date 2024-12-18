@@ -28,3 +28,4 @@ ua-parser-builtins==0.18.0.post1
 urllib3==2.2.3
 user-agents==2.2.0
 yarl==1.18.3
+python-decouple==3.8
