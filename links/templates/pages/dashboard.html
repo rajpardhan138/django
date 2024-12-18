@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default"
+    data-assets-path="{% static 'assets/' %}" data-template="horizontal-menu-template">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>My Links - Pages | Vuexy - Bootstrap Admin Template</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon/favicon.ico' %}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendor/fonts/fontawesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/fonts/tabler-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/fonts/flag-icons.css' %}" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{% static 'assets/vendor/css/rtl/core.css' %}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/css/rtl/theme-default.css' %}"
+        class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{% static 'assets/css/demo.css' %}" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/node-waves/node-waves.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/typeahead-js/typeahead.css' %}" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="{% static 'assets/vendor/css/pages/page-faq.css' %}" />
+
+    <!-- Helpers -->
+    <script src="{% static 'assets/vendor/js/helpers.js' %}"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="{% static 'assets/vendor/js/template-customizer.js' %}"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="{% static 'assets/js/config.js' %}"></script>
+</head>
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-navbar-full layout-horizontal layout-without-menu">
+        <div class="layout-container">
+            <!-- Navbar -->
+
+            <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
+                <div class="container-xxl">
+                    <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
+                        <a href="index.html" class="app-brand-link gap-2">
+                            <span class="app-brand-logo demo">
+                                <svg width="32" height="22" viewBox="0 0 32 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
+                                        fill="#7367F0" />
+                                    <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
+                                        fill="#161616" />
+                                    <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
+                                        fill="#161616" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
+                                        fill="#7367F0" />
+                                </svg>
+                            </span>
+                            <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
+                        </a>
+
+                        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
+                            <i class="ti ti-x ti-sm align-middle"></i>
+                        </a>
+                    </div>
+
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="ti ti-menu-2 ti-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                    data-bs-toggle="dropdown">
+                                    <i class="ti ti-md"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-start dropdown-styles">
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                                            <span class="align-middle"><i class="ti ti-sun me-2"></i>Light</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                                            <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                                            <span class="align-middle"><i
+                                                    class="ti ti-device-desktop me-2"></i>System</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                    data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'assets/img/avatars/1.png' %}" alt
+                                            class="h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="{% static 'assets/img/avatars/1.png' %}" alt
+                                                            class="h-auto rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-medium d-block">{{ request.user.username }}</span>
+                                                    <small class="text-muted">User</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="ti ti-user-check me-2 ti-sm"></i>
+                                            <span class="align-middle">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="ti ti-settings me-2 ti-sm"></i>
+                                            <span class="align-middle">Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span class="d-flex align-items-center align-middle">
+                                                <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
+                                                <span class="flex-grow-1 align-middle">Billing</span>
+                                                <span
+                                                    class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20">2</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'logout' %}">
+                                            <i class="ti ti-logout me-2 ti-sm"></i>
+                                            <span class="align-middle">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- / Navbar -->
+
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <!-- Menu -->
+                    <aside id="layout-menu"
+                        class="layout-menu-horizontal menu-horizontal menu bg-menu-theme flex-grow-0">
+                        <div class="container-xxl d-flex h-100">
+                            <ul class="menu-inner py-1">
+                                <!-- Page -->
+                                <li class="menu-item active">
+                                    <a href="#" class="menu-link">
+                                        <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                                        <div data-i18n="My Links">My Links</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <i class="menu-icon tf-icons ti ti-app-window"></i>
+                                        <div data-i18n="Pricing">Pricing</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- / Menu -->
+
+                    <!-- Content -->
+
+                    <div class="container-xxl flex-grow-1 container-p-y d-flex">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <!-- Navigation -->
+                                <div class="col-md-9 col-12 mb-md-0 mb-3">
+                                    <div class="d-flex justify-content-between flex-column mb-2 mb-md-0">
+                                        <ul class="nav nav-align-left nav-pills flex-column">
+
+                                            <div class="add-new-link-sec">
+                                                <a href="{{ base_url }}create_link/"
+                                                    class="btn btn-outline-primary waves-effect w-100">
+                                                    <span class="ti-xs ti ti-plus me-2"></span>Add New Link
+                                                </a>
+                                            </div>
+
+                                            <hr class="my-3">
+
+                                            <div class="link-search-sec mb-3">
+                                                <div class="input-group input-group-merge">
+                                                    <span class="input-group-text" id="basic-addon-search31"><i
+                                                            class="ti ti-search"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Search..."
+                                                        aria-label="Search..." aria-describedby="basic-addon-search31"
+                                                        id="searchInput">
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div id="linksListArea">
+                                                {% for link in user_links %}
+                                                <li class="nav-item">
+                                                    <button class="nav-link {% if forloop.first %}active{% endif %}"
+                                                        data-bs-toggle="tab" data-bs-target="#payment"
+                                                        data-shortcode="{{ link.short_code }}">
+                                                        <i class="ti ti-link me-1_5 ti-sm"></i>&nbsp;
+                                                        <span class="align-middle fw-medium">
+                                                            {{ base_url }}{{ link.short_code }}
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                {% empty %}
+                                                <p>No links found.</p>
+                                                {% endfor %}
+                                            </div>
+
+
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!-- /Navigation -->
+                            </div>
+
+                            <div class="col-md-9">
+
+                                {% if messages %}
+                                {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                    </button>
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+
+
+                                <div class="row faq-header rounded">
+
+                                    <div class="col-md-3 p-3">
+                                        <div class="scaner-sec mb-2">
+                                            <img src="{% static 'assets/qr/download.png' %}" class="img-fluid"
+                                                id="qr_code" width="220" alt="Qr Image" />
+                                        </div>
+
+                                        <h4 class="text-danger" id="short_link_full_name"></h4>
+                                        <a href="" id="deleteLinkBtn"
+                                            class="btn btn-outline-danger waves-effect  btn-sm">Delete
+                                            Onelink</a>
+                                    </div>
+
+                                    <div class="col-md-9 p-3">
+                                        <div class="row">
+                                            <!-- Card Border Shadow -->
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="card card-border-shadow-primary h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-2">
+                                                            <div class="avatar me-4">
+                                                                <span class="avatar-initial rounded bg-label-primary"><i
+                                                                        class='ti ti-truck ti-28px'></i></span>
+                                                            </div>
+                                                            <h4 class="mb-0" id="totalRequestCount">0</h4>
+                                                        </div>
+                                                        <p class="mb-1">Total Requests</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="card card-border-shadow-warning h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-2">
+                                                            <div class="avatar me-4">
+                                                                <span class="avatar-initial rounded bg-label-warning"><i
+                                                                        class='ti ti-alert-triangle ti-28px'></i></span>
+                                                            </div>
+                                                            <h4 class="mb-0">0</h4>
+                                                        </div>
+                                                        <p class="mb-1">Matched Devices</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="card card-border-shadow-danger h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-2">
+                                                            <div class="avatar me-4">
+                                                                <span class="avatar-initial rounded bg-label-danger"><i
+                                                                        class='ti ti-git-fork ti-28px'></i></span>
+                                                            </div>
+                                                            <h4 class="mb-0">0</h4>
+                                                        </div>
+                                                        <p class="mb-1">Forward Download</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="card card-border-shadow-info h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-2">
+                                                            <div class="avatar me-4">
+                                                                <span class="avatar-initial rounded bg-label-info"><i
+                                                                        class='ti ti-clock ti-28px'></i></span>
+                                                            </div>
+                                                            <h4 class="mb-0">0</h4>
+                                                        </div>
+                                                        <p class="mb-1">Forward Fallback</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ Card Border Shadow -->
+
+                                            <div class="download-btn-sec d-flex justify-content-end mt-5">
+                                                <button type="button"
+                                                    class="btn btn-outline-success waves-effect btn-sm"
+                                                    id="download_svg1">
+                                                    <span class="ti-xs ti ti-download me-2"></span>SVG
+                                                </button>
+                                                <button type="button"
+                                                    class="me-2 ms-2 btn btn-outline-success waves-effect btn-sm"
+                                                    id="download_png_small">
+                                                    <span class="ti-xs ti ti-download me-2"></span>PNG S
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-outline-success waves-effect btn-sm"
+                                                    id="download_png_large">
+                                                    <span class="ti-xs ti ti-download me-2"></span>PNG L
+                                                </button>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="row faq-header rounded mt-5">
+                                    <!-- FAQ's -->
+                                    <div class="col-md-12 p-3">
+                                        <div class="tab-content py-0">
+                                            <div class="tab-pane fade show active" id="payment" role="tabpanel">
+
+                                                <div id="accordionPayment" class="accordion">
+                                                    <div class="card accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button" type="button"
+                                                                data-bs-toggle="collapse" aria-expanded="true"
+                                                                data-bs-target="#accordionPayment-1"
+                                                                aria-controls="accordionPayment-1">
+                                                                <h4 class="link-danger">Onelink Config</h4>&nbsp;
+                                                                <p class="link-danger mt-2"> (Update download links,
+                                                                    etc)
+                                                                </p>
+                                                            </button>
+                                                        </h2>
+
+                                                        <div id="accordionPayment-1"
+                                                            class="accordion-collapse collapse show">
+                                                            <form method="POST" action="{% url 'create_link' %}">
+                                                                <input type="hidden" name="short_code" value="">
+                                                                <div class="accordion-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 text-center">
+                                                                            <p>With onelink.to you get one link to your
+                                                                                app
+                                                                                instead
+                                                                                on one link per app store. Just add each
+                                                                                download
+                                                                                URL (link) below and start use your
+                                                                                onelink.to
+                                                                                your
+                                                                                app.</p>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">Customize
+                                                                                    your
+                                                                                    onelink.to URL. Not in available in
+                                                                                    Free
+                                                                                    plan.</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="customize_url">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">Give your
+                                                                                    onelink
+                                                                                    a name. This is only visible to
+                                                                                    you.</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="name">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-md-12">
+                                                                            <h5 class="text-center mt-3 mb-3">Add your
+                                                                                app
+                                                                                download
+                                                                                links</h5>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">URL to
+                                                                                    your
+                                                                                    app on
+                                                                                    App Store (iOS)</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="ios_url">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">URL to
+                                                                                    your
+                                                                                    iPad
+                                                                                    only version on App Store
+                                                                                    (iOS)</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="i_pad_url">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">URL to
+                                                                                    your
+                                                                                    app
+                                                                                    for Android, e.g. Google
+                                                                                    Play</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="android_url">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">URL to for
+                                                                                    non-Google Huawei, e.g.
+                                                                                    AppGallery</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="non_google_huawei_url">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <p class="text-center">With the Professional
+                                                                            plan
+                                                                            (or
+                                                                            better) you can have specific links for
+                                                                            Windows
+                                                                            and
+                                                                            Mac
+                                                                            OS computers.</p>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 mt-3">
+                                                                                <label class="form-check m-0">
+                                                                                    <input type="checkbox"
+                                                                                        class="form-check-input">
+                                                                                    <span class="form-check-label">Show
+                                                                                        3
+                                                                                        legacy
+                                                                                        link types</span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-md-12">
+                                                                            <h5 class="text-center mt-3 mb-3">Add a
+                                                                                Fallback
+                                                                                link
+                                                                            </h5>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label">Fallback
+                                                                                    URL
+                                                                                    for
+                                                                                    any device not having their own
+                                                                                    download
+                                                                                    link</label>
+                                                                                <div
+                                                                                    class="input-group input-group-merge">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        name="fallback_url">
+                                                                                    <span
+                                                                                        class="input-group-text cursor-pointer"><i
+                                                                                            class="ti ti-help text-muted"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            aria-label="Card Verification Value"
+                                                                                            data-bs-original-title="Card Verification Value"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row button-section">
+                                                                        <div
+                                                                            class="col-md-12 justify-content-end d-flex">
+                                                                            <button type="submit"
+                                                                                class="btn btn-primary me-4 waves-effect waves-light  btn-sm">Save</button>
+                                                                            <button type="reset"
+                                                                                class="btn btn-label-secondary waves-effect  btn-sm">Cancel</button>
+                                                                        </div>
+                                                                        <div class="col-md-12 text-center mt-5">
+                                                                            <p>Changes in your configuration can take up
+                                                                                to
+                                                                                15
+                                                                                minutes to be updated on all servers
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#accordionPayment-2"
+                                                                aria-controls="accordionPayment-2">
+                                                                <h4>Usage Statistics</h4>
+                                                            </button>
+                                                        </h2>
+                                                        <div id="accordionPayment-2"
+                                                            class="accordion-collapse collapse">
+                                                            <div class="accordion-body">
+                                                                We accept Visa®, MasterCard®, American Express®, and
+                                                                PayPal®.
+                                                                Our servers encrypt all
+                                                                information submitted to them, so you can be confident
+                                                                that
+                                                                your
+                                                                credit card information
+                                                                will be kept safe and secure.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <!-- /FAQ's -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /Contact -->
+                    </div>
+                    <!--/ Content -->
+
+                    <!-- Footer -->
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div class="container-xxl">
+                            <div
+                                class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                                <div>
+                                    ©
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    , made with ❤️ by <a href="https://pixinvent.com" target="_blank"
+                                        class="fw-medium">Pixinvent</a>
+                                </div>
+                                <div class="d-none d-lg-inline-block">
+                                    <a href="https://themeforest.net/licenses/standard" class="footer-link me-4"
+                                        target="_blank">License</a>
+                                    <a href="https://1.envato.market/pixinvent_portfolio" target="_blank"
+                                        class="footer-link me-4">More Themes</a>
+
+                                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+                                        target="_blank" class="footer-link me-4">Documentation</a>
+
+                                    <a href="https://pixinvent.ticksy.com/" target="_blank"
+                                        class="footer-link d-none d-sm-inline-block">Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- / Footer -->
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!--/ Content wrapper -->
+            </div>
+
+            <!--/ Layout container -->
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+
+    <!--/ Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="{% static 'assets/vendor/libs/jquery/jquery.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/popper/popper.js' %}"></script>
+    <script src="{% static 'assets/vendor/js/bootstrap.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/node-waves/node-waves.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/hammer/hammer.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/i18n/i18n.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/typeahead-js/typeahead.js' %}"></script>
+    <script src="{% static 'assets/vendor/js/menu.js' %}"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    <!-- Page JS -->
+
+    <script>
+        $(document).ready(function () {
+
+            // Load data for the initially active link
+            generate_qr($('.nav-link.active').data('shortcode'));
+
+            // When any nav-link is clicked, fetch the corresponding data
+            $('.nav-link').on('click', function () {
+                var shortCode = $(this).data('shortcode');
+                generate_qr(shortCode);
+            });
+
+
+        });
+
+        // Trigger download for SVG
+        $('#download_svg').on('click', function () {
+            var shortCode = $('.nav-link.active').data('shortcode');
+            var url = `/download-qr/${shortCode}/svg/`;  // URL for SVG download
+            window.location.href = url;  // Trigger download
+        });
+
+        // Trigger download for small PNG
+        $('#download_png_small').on('click', function () {
+            var shortCode = $('.nav-link.active').data('shortcode');
+            var url = `/download-qr/${shortCode}/png/?size=small`;  // URL for small PNG download
+            window.location.href = url;  // Trigger download
+        });
+
+        // Trigger download for large PNG
+        $('#download_png_large').on('click', function () {
+            var shortCode = $('.nav-link.active').data('shortcode');
+            var url = `/download-qr/${shortCode}/png/?size=large`;  // URL for large PNG download
+            window.location.href = url;  // Trigger download
+        });
+
+
+
+
+        function getLinksData(shortCode) {
+
+            const baseUrl = "{{ base_url }}"; // Get base URL from Django context
+            if (shortCode) {
+                var url = "{% url 'get_links_data' 'short_code_placeholder' %}";
+                url = url.replace('short_code_placeholder', shortCode);  // Replace placeholder with actual short_code
+
+                // Show loading state (optional)
+                $("#short_link_full_nmae").text("Loading...");
+
+                // Make the AJAX request
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    success: function (response) {
+                        if (response.link) {
+                            // Update the form fields with the data from the response
+                            $('input[name="short_code"]').val(response.link.short_code);
+                            $('input[name="name"]').val(response.link.name);
+                            $('input[name="customize_url"]').val(response.link.customize_url);
+                            $('input[name="ios_url"]').val(response.link.ios_url);
+                            $('input[name="android_url"]').val(response.link.android_url);
+                            $('input[name="i_pad_url"]').val(response.link.i_pad_url);
+                            $('input[name="non_google_huawei_url"]').val(response.link.non_google_huawei_url);
+                            $('input[name="fallback_url"]').val(response.link.fallback_url);
+
+                            // Show the full short link
+                            $("#short_link_full_name").text(baseUrl + response.link.short_code);
+                            $("#deleteLinkBtn").attr("href", baseUrl + "delete-link/" + response.link.short_code);
+
+                            //statics
+                            $("#totalRequestCount").text(response.link.click_count);
+
+
+                        } else {
+                            alert('Error: ' + response.error);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Error fetching link data", error);
+                        alert('Something went wrong. Please try again.');
+                    }
+                });
+            } else {
+                console.error("Short code is missing.");
+            }
+        }
+
+        function generate_qr(shortCode) {
+            $.ajax({
+                url: `/generate-qr/${shortCode}/`,
+                method: "GET",
+                success: function (response) {
+                    if (response.qr_code) {
+                        $("#qr_code").attr("src", response.qr_code);
+                        getLinksData(shortCode)
+
+                    } else {
+                        alert('Error: ' + response.error);
+                    }
+                },
+                error: function (error) {
+                    console.error("Error fetching QR code", error);
+                }
+            });
+        }
+
+        document.getElementById("searchInput").addEventListener("input", function () {
+            let filter = this.value.toLowerCase();  // Get the search input
+            let links = document.querySelectorAll("#linksListArea li");  // Select all list items
+
+            links.forEach(function (link) {
+                let linkText = link.querySelector("span").textContent.toLowerCase();  // Get the text of the link
+                if (linkText.indexOf(filter) > -1) {
+                    link.style.display = "";  // Show the link if it matches the search
+                } else {
+                    link.style.display = "none";  // Hide the link if it doesn't match the search
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
