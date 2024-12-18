@@ -85,11 +85,11 @@ WSGI_APPLICATION = "onelink.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "onelink_db",
-        'USER': "root",
-        'PASSWORD': "wrMHsfs#EMXTTXiVmwgH",
-        'HOST': "127.0.0.1",
-        'PORT': "3306",
+        'NAME': config('MYSQL_DATABASE'),
+        'USER': config('MYSQL_USER'),
+        'PASSWORD': config('MYSQL_PASSWORD'),
+        'HOST': config('MYSQL_HOST', default='127.0.0.1'),
+        'PORT': config('MYSQL_PORT', default='3306'),
     }
 }
 
