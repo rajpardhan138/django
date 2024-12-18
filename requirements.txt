@@ -30,3 +30,4 @@ urllib3==2.2.3
 user-agents==2.2.0
 yarl==1.18.3
 gunicorn
+whitenoise
